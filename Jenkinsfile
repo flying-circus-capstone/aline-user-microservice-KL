@@ -42,7 +42,7 @@ pipeline {
                 s3Upload consoleLogLevel: 'INFO',
                 dontSetBuildResultOnFailure: false,
                 dontWaitForConcurrentBuildCompletion: false,
-                entries: [[bucket: AWS_BUCKET, excludedFile: '', flatten: false, gzipFiles: true, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: AWS_REGION, showDirectlyInBrowser: false, sourceFile: 'account-microservice/target/*.jar', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'AWS S3', userMetadata: []
+                entries: [[bucket: AWS_BUCKET, excludedFile: '', flatten: false, gzipFiles: true, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: AWS_REGION, showDirectlyInBrowser: false, sourceFile: 'user-microservice/target/*.jar', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'AWS S3', userMetadata: []
             }
         }
     }
