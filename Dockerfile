@@ -26,4 +26,4 @@ ENV JWT_SECRET_KEY ""
 EXPOSE ${APP_PORT}
 
 WORKDIR /myapp
-CMD java -jar bank-microservice-0.1.0.jar
+CMD java -jar user-microservice-0.1.0.jar
