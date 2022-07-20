@@ -6,7 +6,7 @@
 
     <groupId>com.aline</groupId>
     <artifactId>aline-user-microservice</artifactId>
-    <name>User Microservice Project</name>
+    <name>User Microservice KL</name>
     <version>0.1.0</version>
 
     <packaging>pom</packaging>
