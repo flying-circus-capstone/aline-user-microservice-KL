@@ -15,7 +15,7 @@ pipeline {
         stage("SonarQube Analysis") {
             steps {
                 withSonarQubeEnv("SonarServer") {
-                    sh "mvn verify sonar:sonar"
+                    sh "mvn verify sonar:sonar -Dmaven.test.failure.ignore=true"
                 }  
             }
         }
