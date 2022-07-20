@@ -11,10 +11,10 @@ spring:
       ddl-auto: update
     show-sql: false
   datasource:
-    username: root
-    password: root
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: "jdbc:mysql://localhost:3306/alinedb"
+    url: "jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}"
     initialization-mode: always
 
 app:
@@ -27,11 +27,9 @@ app:
     from: "no-reply@alinefinancial.com"
     enable: true
   security:
-    secret-key: "
-eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY0OTE3NjU0OSwiaWF0IjoxNjQ5MTc2NTQ5fQ.9ohC9U3yZIykV0NjS-B5KiC2kXCEFHQ07Bd_razVQgo"
+    secret-key: "${ENCRYPT_SECRET_KEY}"
     jwt:
-      secret-key: "
-eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY0OTE3NjU0OSwiaWF0IjoxNjQ5MTc2NTQ5fQ.9ohC9U3yZIykV0NjS-B5KiC2kXCEFHQ07Bd_razVQgo"
+      secret-key: "${JWT_SECRET_KEY}"
   aws:
     email:
       template-bucket-name: "aline-email-templates"
